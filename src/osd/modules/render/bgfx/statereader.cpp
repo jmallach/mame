@@ -44,8 +44,10 @@ void state_reader::validate_float_parameter(const Value& value, std::string type
 	}
 }
 
-void state_reader::validate_int_parameter(const Value& value, std::string typeName, std::string name) {
-    if (value.HasMember(name.c_str())) {
+void state_reader::validate_int_parameter(const Value& value, std::string typeName, std::string name)
+{
+    if (value.HasMember(name.c_str()))
+    {
         assert(value[name.c_str()].IsInt());
     }
 }
@@ -75,8 +77,10 @@ bool state_reader::get_bool(const Value& value, const std::string name, const bo
 	return default_value;
 }
 
-int state_reader::get_int(const Value& value, const std::string name, const int default_value) {
-    if (value.HasMember(name.c_str())) {
+int state_reader::get_int(const Value& value, const std::string name, const int default_value)
+{
+    if (value.HasMember(name.c_str()))
+    {
         return int(floor(value[name.c_str()].GetDouble() + 0.5));
     }
     return default_value;
