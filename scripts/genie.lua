@@ -117,6 +117,7 @@ newoption {
 		{ "freebsd",       "FreeBSD"                },
 		{ "netbsd",        "NetBSD"                 },
 		{ "openbsd",       "OpenBSD"                },
+		{ "gnu",           "GNU"                    },
 		{ "pnacl",         "Native Client - PNaCl"  },
 		{ "linux",         "Linux"                  },
 		{ "ios",           "iOS"                    },

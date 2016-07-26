@@ -41,7 +41,7 @@
 /* Large file support on IRIX needs _SGI_SOURCE */
 #undef _POSIX_SOURCE
 
-#elif defined(__linux__) || defined(__FreeBSD_kernel__)
+#elif defined(__linux__) || defined(__GNU__) || defined(__FreeBSD_kernel__)
 #define SDLMAME_LINUX 1
 
 #elif defined(__FreeBSD__)

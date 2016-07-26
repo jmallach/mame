@@ -228,6 +228,9 @@ if _OPTIONS["targetos"]=="linux" then
 elseif _OPTIONS["targetos"]=="openbsd" then
 elseif _OPTIONS["targetos"]=="netbsd" then
 	SDL_NETWORK         = "pcap"
+elseif _OPTIONS["targetos"]=="gnu" then
+	SDL_NETWORK         = "taptun"
+	SYNC_IMPLEMENTATION = "tc"
 elseif _OPTIONS["targetos"]=="haiku" then
 elseif _OPTIONS["targetos"]=="asmjs" then
 elseif _OPTIONS["targetos"]=="windows" then

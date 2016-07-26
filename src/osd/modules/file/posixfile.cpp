@@ -37,6 +37,12 @@
 #endif
 #endif
 
+#if defined(__GNU__)
+#ifndef PATH_MAX
+#define PATH_MAX 1024
+#endif
+#endif
+
 // MAME headers
 #include "posixfile.h"
 #include "unicode.h"

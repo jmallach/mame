@@ -27,10 +27,18 @@
 #include <util.h>
 #elif defined(__linux__) || defined(EMSCRIPTEN)
 #include <pty.h>
+#elif defined(__GNU__)
+#include <pty.h>
+#include <termios.h>
 #elif defined(__HAIKU__)
 #include <bsd/pty.h>
 #endif
 
+#if defined(__GNU__)
+#ifndef PATH_MAX
+#define PATH_MAX 1024
+#endif
+#endif
 
 namespace {
 #if defined(__APPLE__)

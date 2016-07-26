@@ -193,6 +193,9 @@ ifeq ($(firstword $(filter OpenBSD,$(UNAME))),OpenBSD)
 OS := openbsd
 GENIEOS := freebsd
 endif
+ifeq ($(firstword $(filter GNU,$(UNAME))),GNU)
+OS := gnu
+endif
 ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
 OS := macosx
 GENIEOS := darwin
